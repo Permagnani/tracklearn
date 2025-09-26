@@ -1,6 +1,6 @@
+import { home } from
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { Loading } from './components/Loading';
 import { Suspense, lazy } from 'react';
 
 
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App;
+
