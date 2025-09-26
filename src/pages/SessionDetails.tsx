@@ -1,11 +1,11 @@
 // src/pages/SessionDetails.tsx
 import { useParams, Link } from 'react-router-dom';
-import { type StudySession } from './types/session';
+import type { Study } from '../types/study';
 
 
 
 interface SessionDetailsProps {
-  sessions: StudySession[];
+  sessions: Study[];
 }
 
 export default function SessionDetails({ sessions }: SessionDetailsProps) {

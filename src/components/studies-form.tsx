@@ -10,6 +10,7 @@ export function StudyForm({ onAdd }: StudyFormProps) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [duration, setDuration] = useState(0);
+  const [minutes] = useState(0);
   const [difficulty, setDifficulty] = useState<number>(1);
   const [date, setDate] = useState("");
 
@@ -17,12 +18,14 @@ export function StudyForm({ onAdd }: StudyFormProps) {
     event.preventDefault();
 
     const study: Study = {
-      id: crypto.randomUUID(),
-      title,
-      subject,
-      duration,
-      difficulty,
-      date,
+        id: crypto.randomUUID(),
+        title,
+        subject,
+        duration,
+        minutes,
+        difficulty,
+        date,
+        notes: undefined
     };
 
     onAdd(study);
