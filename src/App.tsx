@@ -3,6 +3,7 @@ import { Layout } from './components/Layout';
 import { Loading } from './components/Loading';
 import { Suspense, lazy } from 'react';
 
+
 const Home = lazy(() => import('./pages/home').then(m => ({ default: m.home })));
 const SessionDetails = lazy(() => import('./pages/SessionDetails').then(m => ({ default: m.SessionDetails })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
@@ -14,11 +15,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="workout/:id" element={<SessionDetails />} />
+            <Route path="Seção/:id" element={<SessionDetails />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>
+
     </BrowserRouter>
   );
 }
