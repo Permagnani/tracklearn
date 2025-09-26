@@ -1,4 +1,5 @@
 export interface Study {
+  id: any;
   title: string;       // Título do estudo
   subject: string;     // Matéria ou disciplina
   duration: number;    // Duração em minutos
